@@ -1,0 +1,303 @@
+body,ul,li,p,h1,h2,h3,h4,h5,h6 {
+	margin: 0;
+	padding: 0;
+}
+body {
+	background-color: #f4f4f4;
+}
+nav {
+	background-color: #e3e4e5;
+}
+#list {
+	position: relative;
+	font-size: 12px;
+	width: 800px;
+	/*块级元素水平居中*/
+	margin: 0 auto;
+}
+li {
+	/*修改列表项的标记样式*/
+	list-style-type: none;
+	/*内联块元素不会占满一整行并且可以设置宽高*/
+	display: inline-block;
+	/*设置行高使文字垂直居中*/
+	/*line-height: 34px;*/
+/*	width: 80px;*/
+	/*定义文字水平对齐方向*/
+	/*text-align: left; 默认*/
+	/*text-align: right; 右对齐*/
+	text-align: center;
+	/*设置字体颜色color*/
+	/*color: #808080*/
+	/*font-size: 20px;*/
+}
+#list > li::after {
+	content: "";
+	display: inline-block;
+	width: 1px;
+	height: 8px;
+	background-color: #9a9a9a;
+}
+#list > li > a {
+/*内联元素padding-top 和 padding-bottom不会生效
+把a标签转换成内联块元素*/
+	display: inline-block;
+	color: #808080;
+	text-decoration: none;
+	padding: 10px 12px;
+}
+/*鼠标接触*/
+#list > li > a:hover {
+	color: #f10215;
+	background-color: #ffffff;
+}
+/*鼠标按住不放*/
+/*#list > li > a:active {
+	color: blue;
+}*/
+/*聚焦*/
+/*#list > li > a:focus {
+	color: green;
+}*/
+.text-red {
+	color: #f10215 !important;
+}
+
+#main {
+
+}
+.content {
+	/*相对定位*/
+	position: relative;
+	width: 800px;
+	margin: 0 auto;
+}
+.search-wrap {
+	background-color: #fff;
+	height: 140px;
+}
+.logo {
+	/*绝对定位*/
+	position: absolute;
+	padding: 10px 0;
+	width: 190px;
+	height: 120px;
+}
+.logo > img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+.search-content {
+	position: relative;
+	display: block;
+	width: 400px;
+	margin: 0 auto;
+	padding-top: 30px;
+}
+.search-content .header {
+	position: absolute;
+	bottom: -40px;
+	width: 610px;
+}
+.bold-red {
+	color: #f10215 !important;
+	/*加粗字体*/
+	font-weight: bold;
+}
+.header > li > a {
+	color: #333;
+	text-decoration: none;
+}
+.input-group {
+	width: 100%;
+	border: 2px solid #e1251b;
+}
+.search-input {
+	width: 325px;
+	/*去掉input默认样式*/
+	border: 0; 
+	outline: none;
+	padding: 2px 0 2px 30px;
+	font-size: 18px;
+}
+.search-button {
+	width: 40px;
+	padding: 8px 12px;
+	background-color: #e1251b;
+	/*去掉button默认样式*/
+	border: 0;
+	outline: none;
+	color: #fff;
+}
+.button-content {
+	position: absolute;
+	right: 0;
+	top: 30px;
+}
+.button-content button {
+	display: inline-block;
+	padding: 10px 20px;
+	border: 0;
+	outline: none;
+	border: 1px solid #eee;
+	color: #e1251b;
+	background-color: #fff;
+	/*更改鼠标样式*/
+	cursor: pointer;
+}
+.button-content button:hover {
+	border-color: #e1251b;
+}
+.button-content button .fa {
+	position: relative;
+	font-size: 20px;
+}
+.button-content button .fa .num {
+	position: absolute;
+	top: -6px;
+	right: -6px;
+	display: inline-block;
+	padding: 0 3px;
+	background-color: #e1251b;
+	color: #fff;
+	border-radius: 50%;
+	font-size: 12px;
+}
+.dropdown {
+	position: unset;
+}
+.dropdown:hover .dropdown-list {
+	display: block;
+}
+.dropdown > .dropdown-list {
+	position: absolute;
+	left: 0;
+	top: 36px;
+	display: none;
+	z-index: 99999;
+	border: 1px solid #000;
+	background-color: #fff;
+}
+.dropdown-list .title {
+	font-weight: bold;
+	text-align: left;
+}
+.dropdown-list > .item {
+	float: left;
+	width: 19%;
+	border-right: 1px solid gray;
+	padding: 10px 20px;
+	text-align: left;
+}
+.dropdown-list > .item:last-child {
+	border-right: 0;
+}
+.dropdown-list a {
+	display: inline-block;
+	text-decoration: none;
+	color: #808080;
+	width: 72px;
+	margin-bottom: 5px;
+	text-align: left;
+	font-size: 12px;
+}
+.content-wrap > .content{
+	border: 1px solid #666;
+	height: 300px;
+	margin-top: 20px;
+}
+.first-list {
+	padding: 30px 0 40px;
+	margin-bottom: 20px;
+	border-bottom: 1px solid #808080;
+}
+.first-list .text-img {
+	display: inline-block;
+	height: 42px;
+	width: 42px;
+	background-image: url('../images/sprite.png');
+	background-repeat: no-repeat;
+	margin-bottom: -15px;
+}
+.first-list li:nth-child(1) .text-img{
+	background-position: 3px -192px;
+}
+.first-list li:nth-child(2) .text-img{
+	background-position: -38px -192px;
+}
+.first-list li:nth-child(3) .text-img{
+	background-position: -79px -192px;
+}
+.first-list li:nth-child(4) .text-img{
+	background-position: -119px -192px;
+}
+.first-list ul {
+	width: 780px;
+    margin: 0 auto;
+}
+.footer-menu .item {
+	/*设置为左浮动使其横向排列*/
+	float: left;
+	width: 118px;
+}
+.footer-menu .item:last-child {
+	width: 208px;
+}
+.footer-menu .item li {
+	display: block;
+	text-align: left;
+}
+.footer-menu .item li a {
+	color: #808080;
+	text-decoration: none;
+	/*设置行高使a标签上下之间产生距离*/
+	line-height: 24px;
+	font-size: 12px;
+}
+.footer-menu .item .title {
+	display: inline-block;
+	font-weight: bold;
+	margin-bottom: 10px;
+	color: #666;
+}
+.footer-menu .item .text {
+	display: inline-block;
+	font-size: 12px;
+	color: #808080;
+	line-height: 24px;
+	height: 145px;
+	background: url('../images/sprite.png') no-repeat;
+}
+ .footer-menu {
+ 	padding-bottom: 20px;
+ 	border-bottom: 1px solid #dedede;
+ }
+ .footer-menu::after {
+	content: "";
+	display: block;
+	/*清除浮动*/
+	clear: both;
+}
+.about-list {
+	height: 30px;
+	background-color: gray;
+	margin: 20px 0;
+}
+.info-list li {
+	display: block;
+	text-align: center;
+}
+.map-menu > a {
+	display: inline-block;
+	font-size: 12px;
+	color: #808080;
+	text-decoration: none;
+}
+.map-icon {
+	display: inline-block;
+	width: 20px;
+	height: 17px;
+	/*background-color: gray;*/
+	background-image: url('../images/sprite.png');
+}
